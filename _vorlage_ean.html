@@ -1,0 +1,101 @@
+<html>
+	<head>
+		<title>
+		Prüfziffer EAN
+		</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<script>
+			"use strict";
+			function rechne() {
+				
+               var vN1
+			   var vN2
+			   var vN3
+			   var vN4
+			   var vN5
+			   var vN6
+			   var vN7
+			   var vN8
+			   var vN9
+			   var vN10
+			   var vN11
+			   var vN12
+
+			   vN1 = document.getElementById("idZ1").value;
+			   vN2 = document.getElementById("idZ2").value;
+			   vN3 = document.getElementById("idZ3").value;
+			   vN4 = document.getElementById("idZ4").value;
+			   vN5 = document.getElementById("idZ5").value;
+			   vN6 = document.getElementById("idZ6").value;
+			   vN7 = document.getElementById("idZ7").value;
+			   vN8 = document.getElementById("idZ8").value;
+			   vN9 = document.getElementById("idZ9").value;
+			   vN10 = document.getElementById("idZ10").value;
+			   vN11 = document.getElementById("idZ11").value;
+			   vN12 = document.getElementById("idZ12").value;
+
+               var vE 
+
+			   vE = document.getElementById("idvE").value;
+
+			   vE = vN1*1 
+			   vE = vE + vN2*3
+			   vE = vE + vN3*1
+			   vE = vE + vN4*3
+			   vE = vE + vN5*1
+			   vE = vE + vN6*3
+			   vE = vE + vN7*1
+			   vE = vE + vN8*3
+			   vE = vE + vN9*1
+			   vE = vE + vN10*3
+			   vE = vE + vN11*1
+			   vE = vE + vN12*3
+			   
+
+			    if  (10 - (vE%10)==0) {
+
+			    var vAusgabehtml
+
+                vAusgabehtml =""
+				vAusgabehtml = "Die Artikelnummer lautet"
+				vAusgabehtml = vAugabehtml + vN1 + vN2 + vN3 + vN4 + vN5 + vN6 + vN7 + vN8 + vN9 + vN10 + vN11 + vN12
+				vAusgabehtml = vAusgabehtml + "."
+
+				document.getElementById("idAusgabehtml").innerHTML;
+				}
+
+
+
+
+			}
+			
+			
+		</script>
+	
+</head>
+
+	<body>
+		<h1>Prüfziffer EAN</h1>
+		Europäische Artikelnummer: 
+		<input id="idZ1" type="text" maxlength="1" size="1" value="4">
+		<input id="idZ2" type="text" maxlength="1" size="1" value="2">
+		<input id="idZ3" type="text" maxlength="1" size="1" value="6">
+		<input id="idZ4" type="text" maxlength="1" size="1" value="0">
+		<input id="idZ5" type="text" maxlength="1" size="1" value="0">
+		<input id="idZ6" type="text" maxlength="1" size="1" value="7">
+		<input id="idZ7" type="text" maxlength="1" size="1" value="4">
+		<input id="idZ8" type="text" maxlength="1" size="1" value="8">
+		<input id="idZ9" type="text" maxlength="1" size="1" value="4">
+		<input id="idZ10" type="text" maxlength="1" size="1" value="2">
+		<input id="idZ11" type="text" maxlength="1" size="1" value="3">
+		<input id="idZ12" type="text" maxlength="1" size="1" value="8">
+		
+		
+		</br> 
+		</br> 
+		<button onClick="rechne();">Rechne!</button>
+		</br> 
+		</br> 
+		<div id="idAusgabeHTML"></div>
+	</body>
+</html>
